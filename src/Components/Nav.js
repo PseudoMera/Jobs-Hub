@@ -3,8 +3,14 @@ import {Link} from 'react-router-dom'
 import logo_transparent from '../images/logo_transparent 1.png'
 
 function navBar() {
+
+    const handleClick = () => {
+        console.log("ok")
+    }
+
     return (
-        <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <nav className="navbar is-fixed-top is-link" role="navigation" aria-label="main navigation">
+
             <div className="navbar-brand">
                 <div className ="navbar-item">
                     <Link  to="/">
@@ -12,13 +18,15 @@ function navBar() {
                     </Link>       
                 </div>
 
-                <div role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <Link to="/">
-                                            
+                <div role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" 
+                onClick={() => {
+                    let menu = document.querySelector(".navbar-menu")
+                    menu.classList.toggle("is-active")
+                }}>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
-                    </Link>   
+                    
                 </div>      
             </div>
 
@@ -28,7 +36,7 @@ function navBar() {
                     <div className="navbar-item">
                         <div className="field">
                             <div className="control">
-                                <input className="input" type="text" placeholder="Programming Language, e.g. Go"/>
+                                <input className="input" type="text" placeholder="Programming Language, e.g. Go" onChange={()=>{}}/>
                             </div>
                         </div>
                     </div>
@@ -36,14 +44,16 @@ function navBar() {
                     <div className="navbar-item">
                         <div className="field">
                             <div className="control">
-                                <input className="input" type="text" placeholder="Location, e.g. New York"/>
+                                <input className="input" type="text" placeholder="Location, e.g. New York" onChange={() => {}}/>
                             </div>
                         </div>
                     </div>
 
                     <div className="navbar-item">
                         <div className="control">
-                            <button className="button is-link">Search</button>
+                          <Link to="/jobs">
+                            <button className="button is-info" onClick={() => handleClick()}>Search</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -55,7 +65,7 @@ function navBar() {
                             <Link to="/" className="button is-primary">
                                 <strong>Sign up</strong>
                             </Link>
-                            <Link to="/" className="button is-light">
+                            <Link to="/" className="button is-info">
                                 Log In
                             </Link>
                         </div>
