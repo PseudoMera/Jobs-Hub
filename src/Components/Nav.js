@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import logo_transparent from '../images/logo_transparent 1.png'
 
-function navBar() {
+function NavBar() {
+    const [description, setDescription] = useState('')
+    const [location, setLocation] = useState('')
+    
+    const handleChangeDescription = (event) => {
+        setDescription(event.target.value)
+    }
 
-    const handleClick = () => {
-        console.log("ok")
+    const handleChangeLocation = (event) => {
+        setLocation(event.target.value)
     }
 
     return (
@@ -36,7 +42,7 @@ function navBar() {
                     <div className="navbar-item">
                         <div className="field">
                             <div className="control">
-                                <input className="input" type="text" placeholder="Programming Language, e.g. Go" onChange={()=>{}}/>
+                                <input className="input" id="descriptionInput" type="text" placeholder="Programming Language, e.g. Go" onChange={handleChangeDescription}/>
                             </div>
                         </div>
                     </div>
@@ -44,15 +50,24 @@ function navBar() {
                     <div className="navbar-item">
                         <div className="field">
                             <div className="control">
-                                <input className="input" type="text" placeholder="Location, e.g. New York" onChange={() => {}}/>
+                                <input className="input" id="locationInput" type="text" placeholder="Location, e.g. New York" onChange={handleChangeLocation}/>
                             </div>
                         </div>
                     </div>
 
                     <div className="navbar-item">
                         <div className="control">
-                          <Link to="/jobs">
-                            <button className="button is-info" onClick={() => handleClick()}>Search</button>
+                          <Link to={{
+                              pathname: '/jobs',
+                              state: {
+                                  description,
+                                  location
+                              }
+                          }}>
+                            <button className="button is-info" onClick={() => {
+                                document.getElementById("locationInput").value = ''
+                                document.getElementById("descriptionInput").value = ''
+                            }}>Search</button>
                             </Link>
                         </div>
                     </div>
@@ -80,4 +95,4 @@ function navBar() {
         );
 }
 
-export default navBar;
+export default NavBar;
