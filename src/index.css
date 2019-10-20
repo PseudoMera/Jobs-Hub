@@ -2,4 +2,13 @@
 
 .navbar-item img {
     max-height: 3rem;
-  }
+}
+
+body {
+  padding-top: 35px;
+}
+
+
+.card-footer {
+  margin-bottom: 20px;
+}
