@@ -11,7 +11,6 @@ function HomePage() {
              </h2>
            </div>
         </section>
-
         </>
     )
 }

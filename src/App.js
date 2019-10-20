@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {BrowserRouter, Route, Switch} from "react-router-dom"
 import Nav from "./Components/Nav"
 import HomePage from './Pages/HomePage'

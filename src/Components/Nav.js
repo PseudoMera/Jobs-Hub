@@ -15,7 +15,7 @@ function NavBar() {
     }
 
     return (
-        <nav className="navbar is-fixed-top is-link" role="navigation" aria-label="main navigation">
+        <nav className="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
 
             <div className="navbar-brand">
                 <div className ="navbar-item">
@@ -38,7 +38,11 @@ function NavBar() {
 
             <div id="navbarBasicExample" className="navbar-menu">
                 <div className="navbar-start">
-                    <Link to="/" className="navbar-item">Home</Link>
+                    <Link to="/" className="navbar-item">
+                        <button className="button is-primary">
+                            <strong>Home</strong>
+                        </button>
+                    </Link>
                     <div className="navbar-item">
                         <div className="field">
                             <div className="control">
@@ -84,13 +88,9 @@ function NavBar() {
                                 Log In
                             </Link>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
          </nav>
         );
 }
