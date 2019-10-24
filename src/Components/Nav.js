@@ -15,7 +15,7 @@ function NavBar() {
     }
 
     return (
-        <nav className="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+        <nav className="navbar is-fixed-top" id="myNav" role="navigation" aria-label="main navigation">
 
             <div className="navbar-brand">
                 <div className ="navbar-item">
@@ -39,7 +39,7 @@ function NavBar() {
             <div id="navbarBasicExample" className="navbar-menu">
                 <div className="navbar-start">
                     <Link to="/" className="navbar-item">
-                        <button className="button is-primary">
+                        <button className="button">
                             <strong>Home</strong>
                         </button>
                     </Link>
@@ -68,7 +68,7 @@ function NavBar() {
                                   location
                               }
                           }}>
-                            <button className="button is-info" onClick={() => {
+                            <button className="button" onClick={() => {
                                 document.getElementById("locationInput").value = ''
                                 document.getElementById("descriptionInput").value = ''
                             }}>Search</button>
@@ -81,10 +81,10 @@ function NavBar() {
                 <div className="navbar-end">
                     <div className="navbar-item">
                         <div className="buttons">
-                            <Link to="/" className="button is-primary">
+                            <Link to="/" className="button ">
                                 <strong>Sign up</strong>
                             </Link>
-                            <Link to="/" className="button is-info">
+                            <Link to="/" className="button">
                                 Log In
                             </Link>
                         </div>

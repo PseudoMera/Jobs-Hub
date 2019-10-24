@@ -11,4 +11,24 @@ body {
 
 .card-footer {
   margin-bottom: 20px;
+  background: #242933;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #242933;
+}
+
+#myNav {
+  background: #242933;
+}
+
+a {
+  color:white;
+}
+
+a:hover {
+  color: #b3e5fc;
 }
