@@ -69,7 +69,7 @@ function JobsPage(props) {
                             {strip_html_tags(job.description)}
                         </div>
                     </div>
-                    <footer className="card-footer" style={{backgroundColor:"#6AD2B3"}}>
+                    <footer className="card-footer">
                         <p className="card-footer-item">
                                 <a href={job.how_to_apply ?
                                 getHref(job.how_to_apply)
@@ -81,7 +81,9 @@ function JobsPage(props) {
 
                         <p className="card-footer-item">
                             <span className="footer-wrap">
-                                <a href={job.company_url} rel="noopener noreferrer">
+                            <a href={job.how_to_apply ?
+                                getHref(job.how_to_apply)
+                                : ''} target="_blank" rel="noopener noreferrer">
                                     <strong>Company website</strong>
                                 </a>
                             </span>
