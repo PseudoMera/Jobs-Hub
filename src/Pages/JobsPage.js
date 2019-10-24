@@ -36,7 +36,7 @@ function JobsPage(props) {
 
     return (
             <div className="container is-fluid">
-                <h1 className="title">
+                <h1 className="title" style={{paddingTop:"2em"}}>
                     {
                         location ?
                         `Jobs in ${location}`:
