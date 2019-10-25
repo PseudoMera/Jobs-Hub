@@ -20,7 +20,7 @@ function NavBar() {
             <div className="navbar-brand">
                 <div className ="navbar-item">
                     <Link  to="/">
-                         <img src={logo_transparent} alt="website logo" />
+                         <h1 className="subtitle nav">JobsHub</h1>
                     </Link>       
                 </div>
 
@@ -38,11 +38,11 @@ function NavBar() {
 
             <div id="navbarBasicExample" className="navbar-menu">
                 <div className="navbar-start">
-                    <Link to="/" className="navbar-item">
+                    {/* <Link to="/" className="navbar-item">
                         <button className="button">
                             <strong>Home</strong>
                         </button>
-                    </Link>
+                    </Link> */}
                     <div className="navbar-item">
                         <div className="field">
                             <div className="control">
