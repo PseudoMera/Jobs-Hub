@@ -36,13 +36,13 @@ function JobsPage(props) {
 
     return (
             <div className="container is-fluid">
-                <h1 className="title" style={{paddingTop:"2em"}}>
+                {/* <h1 className="title" style={{paddingTop:"2em"}}>
                     {
                         location ?
                         `Jobs in ${location}`:
                         'Jobs: '
                     }    
-                 </h1>
+                 </h1> */}
                    {
                 jobs ?
                 jobs.map((job) => 

@@ -4,10 +4,40 @@
     max-height: 3rem;
 }
 
-body {
-  padding-top: 35px;
+.navbar-burger.burger {
+  color:white;
 }
 
+.navbar-end {
+  margin-right: 2em;
+}
+
+.subtitle.nav {
+  color:white;
+}
+
+#myNav {
+  background: #242933;
+  width: 100vw;
+}
+
+.hero {
+  /* background: linear-gradient(#6190E8, #9198e5);    */
+  background: #43C6AC;  
+  background: -webkit-linear-gradient(to right, #191654, #43C6AC);  
+  background: linear-gradient(to right, #191654, #43C6AC); 
+  
+  width: 100%;
+  height: 100vh;
+}
+
+.container.is-fluid {
+  margin-top: 7em;
+}
+
+/* .colums.is-mobile {
+  margin-top: 7em;
+} */
 
 .card-footer {
   margin-bottom: 20px;
@@ -15,15 +45,12 @@ body {
 }
 
 .footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   background: #242933;
 }
 
-#myNav {
-  background: #242933;
-}
 
 a {
   color:white;
@@ -31,4 +58,12 @@ a {
 
 a:hover {
   color: #b3e5fc;
+}
+
+.container.hero-body {
+  padding-top: 10em;
+}
+
+#root {
+  width: 100vw;
 }
