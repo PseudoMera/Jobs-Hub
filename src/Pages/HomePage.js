@@ -1,9 +1,7 @@
 import React from 'react';
-import Footer from '../Components/Footer';
 
 function HomePage() {
     return (
-        <>
         <section className="hero is-large">
            <div className="container hero-body">
              <h1 className="title" style={{fontSize:'5em', color:'white'}}>Jobs Hub</h1>
@@ -12,8 +10,6 @@ function HomePage() {
              </h2>
            </div>
         </section>
-        <Footer/>
-        </>
     )
 }
 

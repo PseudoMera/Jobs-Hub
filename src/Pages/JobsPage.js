@@ -92,7 +92,10 @@ function JobsPage(props) {
                 </div>
                 )
                 :
-                <Load/>
+                <div className="loader-custom">
+                    <Load/>
+                </div>
+                
             }
             </div>
     )
