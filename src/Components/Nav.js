@@ -78,7 +78,7 @@ function NavBar() {
                 </div>
 
 
-                <div className="navbar-end">
+                {/* <div className="navbar-end">
                     <div className="navbar-item">
                         <div className="buttons">
                             <Link to="/" className="button ">
@@ -89,7 +89,7 @@ function NavBar() {
                             </Link>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
          </nav>
         );
