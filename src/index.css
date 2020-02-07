@@ -53,7 +53,7 @@
   bottom: 0;
   width: 100%;
   background: #242933;
-  height: auto;
+  height: 15vh;
 }
 
 
@@ -72,6 +72,11 @@ a:hover {
 #root {
   width: 100vw;
   height: 100vh;
+}
+
+section.hero.is-large {
+  width: 100vw;
+  height: 85vh;
 }
 
 .loader-custom {
