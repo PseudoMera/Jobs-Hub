@@ -1,11 +1,14 @@
-import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
-import logo_transparent from '../images/logo_transparent 1.png'
+import React, {useState, useContext} from 'react';
+import {Link} from 'react-router-dom';
+import { UserContext } from './UserContext';
+import userImage from '../images/user.png';
 
-function NavBar() {
+function NavBar(props) {
     const [description, setDescription] = useState('')
     const [location, setLocation] = useState('')
     
+    const {user, password, login} = useContext(UserContext);
+
     const handleChangeDescription = (event) => {
         setDescription(event.target.value)
     }
@@ -77,19 +80,30 @@ function NavBar() {
                     </div>
                 </div>
 
-
-                {/* <div className="navbar-end">
+                <div className="navbar-end">
                     <div className="navbar-item">
+
+                {
+                    user.length > 0 && login ? 
+                    
+                        <figure className="image is-48x48" >
+                            <img className="is-rounded" src={userImage} alt="Profile"></img>
+                        </figure>
+            
+                    
+                    :
                         <div className="buttons">
                             <Link to="/" className="button ">
                                 <strong>Sign up</strong>
                             </Link>
-                            <Link to="/" className="button">
-                                Log In
+                            <Link to="/login" className="button">
+                                <strong>Log In</strong>
                             </Link>
                         </div>
+                }
+
                     </div>
-                </div> */}
+               </div>
             </div>
          </nav>
         );

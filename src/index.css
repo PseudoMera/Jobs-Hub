@@ -1,5 +1,10 @@
 @import url("../node_modules/bulma/css/bulma.css");
 
+
+#root {
+  position: absolute;
+}
+
 .navbar-item img {
     max-height: 3rem;
 }
@@ -38,7 +43,10 @@
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 20em;
 }
+
+
 
 
 .card-footer {
@@ -46,15 +54,16 @@
   background: #242933;
 }
 
-.footer {
+/* .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   bottom: 0;
+  top:100;
   width: 100%;
   background: #242933;
-  height: 15vh;
-}
+  position: relative;
+} */
 
 
 a {
@@ -77,6 +86,7 @@ a:hover {
 section.hero.is-large {
   width: 100vw;
   height: 85vh;
+  
 }
 
 .loader-custom {
